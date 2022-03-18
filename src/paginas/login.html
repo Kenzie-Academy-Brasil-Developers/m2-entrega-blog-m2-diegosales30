@@ -4,29 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/style/reset.css">
-    <link rel="stylesheet" href="./src/style/style.css">
+    <link rel="stylesheet" href="./../style/reset.css">
+    <link rel="stylesheet" href="./../style/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300&display=swap" rel="stylesheet">
-    <title>BlogSocial</title>
+    <title>Pagina de login</title>
 </head>
 <body>
-    <div class="container-form">
+    <div class="container-form--login">
         <div class="box-form ">
-            <h2>Cadastro</h2>
-            <a class="close" href="./../../index.html">X</a>
-            <form action="#">
-                <input name="username" type="text" placeholder="Nome de usuário">
-                <input name="email" type="email" placeholder="Email">
-                <input name="avatarUrl" type="url" placeholder="Foto de perfil">
-                <input name="password" type="password" placeholder="Senha">
-                <button class="btnCadastrar">Cadastrar</button>
-            </form>
             
+            <h2>Login</h2>
+            <a class="close" href="./../../index.html">X</a>
+            <form class="form-login" action="#">
+                <input name="email" type="email" placeholder="Email">
+                <input name="password" type="password" placeholder="Senha">
+                <button class="btnLogar">Login</button>
+            </form>
         </div>
-        <a class="login" href="./src/paginas/login.html">Fazer login</a>
-        <script type="module" src="src/script.js"></script>
     </div>
+    <a class="cadastro" href="./../../index.html">ainda nao possui cadastro?</a>
+
+    <script type="module" src="login.js"></script>
 </body>
 </html>

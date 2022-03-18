@@ -1,0 +1,414 @@
+
+body{
+    font-family: 'Montserrat';
+    display: flex;
+    justify-content: center;
+    background-color: rgba(197, 194, 197, 0.616);
+}
+
+
+/*pagina inicial*/
+.container-index{
+    
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    margin-top: 200px;
+}
+h1{
+    text-align: center;
+    font-size: 30px;
+}
+.link{  
+    display: block;
+    padding: 10px;
+    margin-top: 30px;
+    width: 280px;
+    height: 42px;
+    background: #3466a7;
+    border-radius: 5px;
+    color: #FFFF;
+    text-decoration: none;
+    font-family: 'Montserrat';
+    text-align: center;
+}
+/*pagina de cadastro*/
+.container-form{
+    margin:auto;
+    margin-top: 10%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 428px;
+    height: 401px;
+    background: #6495ED;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+}
+.classadd::after{
+    content: 'Logado com sucesso';
+    font: message-box;
+    text-align: center;
+    color: #34a73a;
+    font-weight: 700;
+    margin-right: 70px;
+    position: absolute;
+    background-image: url("https://cdn.dribbble.com/users/2024706/screenshots/4520414/reload.gif");
+    background-size: 150px;
+    width: 150px;
+    height: 115px;
+    border-radius: 15px;
+    border: 3px dotted rgba(0, 0, 0, 0.493);
+}
+.modalCadastro::after{
+    content: 'Email ja existente, faça login!';
+    font-weight: 700;
+    font-family: 'Montserrat';
+    font-size: 25px;
+    text-align: center;
+    padding: 70px;
+    margin-right: 80px;
+    position: absolute;
+    background-color: #f0e7e7e3;
+    background-size: 150px;
+    width: 150px;
+    height: 100px;
+    border-radius: 15px;
+    border: 3px dotted rgba(0, 0, 0, 0.253);
+}
+.EmailCadastrado::before{
+    content: 'Conta criada com sucesso! faça login';
+    font-weight: 700;
+    font-family: 'Montserrat';
+    font-size: 25px;
+    text-align: center;
+    padding: 70px;
+    margin-right: 80px;
+    position: absolute;
+    background-color: #f0e7e7e3;
+    background-size: 150px;
+    width: 150px;
+    height: 100px;
+    border-radius: 15px;
+    border: 3px dotted rgba(0, 0, 0, 0.253);
+
+}
+.container-form--login{
+    margin:auto;
+    margin-top: 10%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 428px;
+    height: 401px;
+    background: #6495ED;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+}
+
+.box-form{
+    
+    width: 428px;
+    display: flex;
+    justify-content: center;
+    margin-left: 70px;
+}
+.classErro::after{
+    content: '';
+    position: absolute;
+    background-image: url(./../img/erroMsg.png);
+    background-size: 350px;
+    background-position: center;
+    margin-right: 85px;
+    border-radius: 15px;
+    width: 255px;
+    height: 250px;
+    
+    background-color: #5F5C5C;
+}
+h2{
+    position: absolute;
+    width: 127px;
+    height: 22px;
+    left: 155px;
+    top: 32px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #FFFF;
+}
+.close{
+    position: absolute;
+    width: 18px;
+    height: 29px;
+    left: 390px;
+    top: 14px;
+    text-decoration: none;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #FFFFFF;
+}
+input{
+    margin: 10px;
+    width: 246px;
+    height: 42px;
+    background: #F3F3F3;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 16px;
+    color: #5F5C5C;
+}
+input[type="file"] {
+    display: none;
+}
+input::placeholder{
+    text-align: center;
+}
+label {
+    padding: 15px 10px;
+    width: 231px;
+    color: #5f5c5c85;
+    background: #F3F3F3;
+    display: block;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-family: 'Montserrat';
+    text-align: center;
+    font-style: normal;
+    
+    font-size: 13px;
+    line-height: 16px;  
+}
+.btnCadastrar, .btnLogar{
+    position: absolute;
+    width: 132px;   
+    height: 42px;
+    left: 148px;
+    top: 340px;
+    border: none;
+    background: #EDBC64;
+    border-radius: 5px;
+    color: #FFFF;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+
+    color: #FFFFFF;
+}
+.btnpostar{
+    position: absolute;
+    width: 80px;   
+    height: 30px;
+    
+    top: 70px;
+    border: none;
+    background: #EDBC64;
+    border-radius: 5px;
+    color: #FFFF;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 22px;
+
+    color: #f5f6f6;
+}
+
+.btnCadastrar, .btnpostar, .btnLogar:hover{
+    cursor: pointer;
+}
+.btnpostar:hover{
+    background-color: #c0871f;
+}
+.login {
+    position: absolute;
+    margin-top: 320px;
+    margin-left: 310px;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+.cadastro{
+    position: absolute;
+    margin-top: 360px;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+
+/* pagina principal*/
+header {
+    width: 100%;
+    height: 61px;
+    background: #6495ED;
+    display: flex;
+    justify-content: space-between;
+}
+
+header > img {
+    position: absolute;
+    width: 49px;
+    height: 46px;
+    left: 14px;
+    top: 7px;
+    background-color: #5F5C5C;
+    border-radius: 100px;
+}
+header > h2{
+    position: absolute;
+    width: 133px;
+    height: 22px;
+    left: 72px;
+    top: 19px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #FAFAFA;
+}
+header > button{
+    margin-left: 92%;
+    margin-top: 15px;
+    width: 97px;
+    height: 30px;
+
+    background: #EDBC64;
+    border-radius: 5px;
+}
+.container-posts{
+    position: absolute;
+}
+
+.posts__area{
+    
+    width: 601px;
+    height: 97px;
+    left: 313px;
+    margin-top: 70px;
+    background: #FFFFFF;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+.posts__area::placeholder{
+    position: absolute;
+    width: 229px;
+    height: 16px;
+    left: 331px;
+    text-align: justify;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: #989898;
+}
+
+/*css posts*/
+
+.postagens{
+    
+    width: 600px;
+    height: 150px;
+    margin-left: 13px;
+    padding-top: 50px;
+    
+}
+.container-post{
+    border: 1px solid rgba(8, 8, 8, 0.116);
+    margin: 15px;
+    padding: 20px;
+    border-radius: 5px;
+    overflow: auto;
+    box-shadow: 5px 5px 5px 5px rgba(155, 153, 153, 0.698);
+}
+.container-post:hover{
+    cursor: pointer;
+    background-color: #dfe3e9;
+}
+.container-flex{
+    display: flex;
+    align-items: center;
+    
+
+}
+.container-flex > h3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    color: #1f1e1eda;
+    margin-left: 10px;
+    
+}
+.imgPost{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 2px solid rgb(148, 8, 148);
+    
+}
+
+.conteudo{
+    margin-top: 5px;
+    color: #5F5C5C;
+    margin-left: 10px;
+    font-weight: 500;
+    
+}
+
+.dataPost{
+    
+    margin-left: 450px;
+    font-weight: 600;
+    color: #5F5C5C;
+    font-size: 13px;
+    
+}
+
+.btn-editar{
+    margin-left: 85%;
+    width: 70px;
+    height: 20px;
+    font-family: monospace;
+    color: #2f2e2e;
+    background: #EDBC64;
+    border-radius: 5px;
+}
+
+.btn-remover{
+    margin-left: 85%;
+    margin-top: 15px;
+    width: 70px;
+    height: 20px;
+    font-family: monospace;
+    color: #2f2e2e;
+    background: #EDBC64;
+    border-radius: 5px;
+}
+.btn-remover:hover, .btn-editar:hover{
+    cursor: pointer;
+    background-color: #c0871f;
+}
