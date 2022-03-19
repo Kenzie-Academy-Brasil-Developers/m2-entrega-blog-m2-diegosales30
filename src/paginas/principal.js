@@ -2,7 +2,7 @@ import { User, dadosUser, saida, aut} from "../models/User.js";
 const form          = document.querySelector('form')
 const header        = document.querySelector('.header')
 const containerPost = document.querySelector('.postagens')
-
+const editarForm    = document.querySelector('#formularioEtitar')
 
 
 class principal {
@@ -83,6 +83,7 @@ class principal {
                 //console.log('IDENTICO')
                 const btnEditar  = document.createElement('button')
                 btnEditar.innerText = 'editar'
+                btnEditar.id  = userid[i]
                 btnEditar.classList.add('btn-editar')
 
                 const btnRemover = document.createElement('button')
@@ -124,6 +125,42 @@ class principal {
         }, 1000);
 
     }
+    static criarPopupEdicao(event){
+        event.preventDefault()
+        const idEdit = event.target.id
+        const divPop = document.querySelector('.popUpAtualizar')
+        divPop.style.display="flex"
+        
+
+    }
+    static dadosEdit(event){
+        event.preventDefault()
+        const btn = document.querySelector('.btn-remover')
+        const btnid = btn.id
+
+        console.log(btnid)
+        const dados = {}
+        
+        const valor =  [...event.target]
+        valor.forEach(current => {
+            if(current.name){
+                const name = current.name
+                const value = current.value
+
+                dados[name] = value
+            }
+            console.log(dados)
+        })
+        User.atualizarPost(btnid, dados)
+        const divPop = document.querySelector('.popUpAtualizar')
+        divPop.style.display="none"
+
+        setTimeout(() => {
+            document.location.reload()
+            clearInterval()
+        }, 2000);
+        
+    }
 }
 
 
@@ -138,3 +175,10 @@ logout.addEventListener('click', principal.logout)
 
 const btnRemover = document.querySelectorAll('.btn-remover')
 btnRemover.forEach(btn => btn.addEventListener("click", principal.remover))
+
+
+const btnEdit = document.querySelectorAll('.btn-editar')
+btnEdit.forEach(btn => btn.addEventListener("click", principal.criarPopupEdicao))
+
+
+editarForm.addEventListener("submit", principal.dadosEdit)

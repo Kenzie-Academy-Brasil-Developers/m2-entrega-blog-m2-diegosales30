@@ -19,7 +19,10 @@ class login {
         User.login(dadosUser)
         
     }
+    
 }
 btnForm.addEventListener("submit", login.usuario)
+
+export {login}
 
 

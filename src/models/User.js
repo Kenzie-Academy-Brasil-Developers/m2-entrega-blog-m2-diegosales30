@@ -1,5 +1,7 @@
 
 
+
+
 class User{
     
     
@@ -17,11 +19,12 @@ class User{
         if(dados.message == 'duplicate key value violates unique constraint \"UQ_97672ac88f789774dd47f7c8be3\"'){
             alert('EMAIL JA EM USO, FAÇA LOGIN')
             
+            
             setTimeout(function() {
                 
                 window.location.assign("/src/paginas/login.html")
 
-            }, 1000);
+            }, 3000);
 
         }else{
             alert('Cadastro Realizado com sucesso!')
@@ -51,6 +54,8 @@ class User{
         await this.listarUser()
         
         if(response.status == 200){
+            
+            
             setTimeout(function() {
                 
                 window.location.assign("./../paginas/principal.html")
@@ -122,18 +127,19 @@ class User{
         //return post
     }
 
-    static async atualizarPost(){
-
-        const response = await fetch("https://api-blog-m2.herokuapp.com/post/9cc3c5e3-83df-4201-b1f3-87efae81fa96", {
+    static async atualizarPost(idPost, data){
+        const aut = JSON.parse(localStorage.getItem('aut'))
+        let token = aut.token
+        const response = await fetch(`https://api-blog-m2.herokuapp.com/post/${idPost}`, {
             "method": "PATCH",
             "headers": {
-                "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijg2ZTFhNjU5LWZjNDktNGM1ZS1iMmU0LWVlMjg2ZTRjOTAxZiIsImlhdCI6MTY0NzA5NzYyOSwiZXhwIjoxNjQ3MTg0MDI5fQ.qNEGcvnVZy9lvyYDbCzUMxdj-vi4nEsLHHLnsS3TTQg",
+                "Authorization": `Bearer ${token}`,
                 "Content-Type": "application/json"
             },
-            "body": {
-                "newContent": "Esse é um teste de atualização do post do blog do M2"
-            }
+            "body":JSON.stringify(data)
         })
+        const dat = await response
+        console.log(dat)
     }
 
     static async removerPost(id){
@@ -149,7 +155,6 @@ class User{
         const data  = await response
         console.log(data)
     }
-
 }
 export const  aut      = JSON.parse(localStorage.getItem('aut'))
 export const dadosUser = JSON.parse(localStorage.getItem('output'))

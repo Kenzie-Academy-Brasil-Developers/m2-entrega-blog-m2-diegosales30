@@ -1,6 +1,6 @@
 import { User } from "./models/User.js";
 const input  = document.querySelector('form')
-
+const boxForm = document.querySelector('.box-form')
 class InfoCadastro {
 
     static inputs(event){
@@ -24,3 +24,4 @@ class InfoCadastro {
 
 input.addEventListener("submit", InfoCadastro.inputs)
 
+export {InfoCadastro}
